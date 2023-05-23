@@ -10,6 +10,15 @@ app.get('/greeting/:name', (req, res) => {
     res.send(`Hello, ${name}! It's so great to see you!`)
 })
 
+// Tip Calculator
+app.get(, (req, res) => {
+    const total =parseFloat(req.params.total)
+    const tipPercentage = parseFloat(req.params.tipPercentage)
+
+    const tipAmount = (total * tipPercentage) /100
+    res.send(tipAmount.toString())
+})
+
 app.listen(port, () => {
     console.log(`Yes I am listening on port ${port}`)
 })
